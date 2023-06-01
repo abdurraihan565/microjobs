@@ -1,0 +1,61 @@
+const data = {
+  products: [
+    {
+      name: 'youtube subcribe',
+      slug: 'youtube-subcribe',
+      catagory: 'youtube',
+      price: 0,
+      countInStock: 0,
+      countOutStock: 6,
+      country: 'bangladesh',
+    },
+    {
+      name: 'facebook subcribe',
+      slug: 'facebook-subcribe',
+      catagory: 'youtube',
+      price: 20,
+      countInStock: 10,
+      countOutStock: 20,
+      country: 'pakistan',
+    },
+    {
+      name: 'instagram subcribe',
+      slug: 'instagram-subcribe',
+      catagory: 'instagram',
+      price: 100,
+      countInStock: 15,
+      countOutStock: 20,
+      country: 'England',
+    },
+    {
+      name: 'twitter subcribe ',
+      slug: 'twitter-subcribe',
+      catagory: 'twitter',
+      price: 150,
+      countInStock: 20,
+      countOutStock: 20,
+      country: 'shilanka',
+    },
+    {
+      name: 'whats app subcribe ',
+      slug: 'whatapp-subcribe',
+      catagory: 'twitter',
+      price: 150,
+      countInStock: 20,
+      countOutStock: 40,
+      country: 'shilanka',
+    },
+    {
+      name: 'redit subcribe ',
+      slug: 'redit-subcribe',
+      catagory: 'twitter',
+      price: 150,
+      countInStock: 20,
+      countOutStock: 10,
+      country: 'shilanka',
+      description: 'this fgjfkgjkjgfkjhfjk fkgfjhfg fkghfjk',
+    },
+  ],
+};
+
+export default data;
