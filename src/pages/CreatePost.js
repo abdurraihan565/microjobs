@@ -23,18 +23,6 @@ function CreatePost() {
     };
     fetchData();
   }, []);
-  /*
-  const PostBalance = DepositBalance.map((data) => {
-    if (data.id == sessionStorage.getItem('id')) {
-      const { balance } = data;
-      //return balance;
-      return balance;
-    }
-    return false;
-  });
-  console.log(PostBalance);
-  */
-
   const postBtn = (e) => {
     e.preventDefault();
     setTimeout(() => {

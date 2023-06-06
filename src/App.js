@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import ProductScreen from './pages/ProductScreen';
-//import Layout from 'Layout';
+
 //pages
 import Home from './pages/Home';
 import Error from './pages/Error';

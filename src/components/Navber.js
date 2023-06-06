@@ -4,10 +4,11 @@ import { Link, useNavigate } from 'react-router-dom';
 
 function Navber() {
   const Navigate = useNavigate();
-  const [userinfo, setuserinfo] = useState([]);
+
   const [message, setmessage] = useState([]);
+  console.log(message);
   const [DepositBalance, setDepositBalance] = useState([]);
-  console.log(DepositBalance);
+  //console.log(DepositBalance);
 
   const id = sessionStorage.getItem('id');
   const name = sessionStorage.getItem('name');
@@ -20,15 +21,6 @@ function Navber() {
     fetchData();
   }, []);
 
-  /* const PostBalance = DepositBalance.map((data) => {
-    if (data.id == sessionStorage.getItem('id')) {
-      const { balance } = data;
-      return balance;
-     
-    }
-    return false;
-  });
-  console.log(PostBalance);*/
   const Logout = () => {
     sessionStorage.removeItem('instagram');
     sessionStorage.removeItem('facebook');
@@ -64,14 +56,6 @@ function Navber() {
     const profile = document.querySelector('.profile_navber');
     profile.style.display = 'none';
   };
-
-  useEffect(() => {
-    const fetchData = async () => {
-      const result = await axios.get('/userinfo');
-      setuserinfo(result.data);
-    };
-    fetchData();
-  }, []);
 
   useEffect(() => {
     const fetchData = async () => {

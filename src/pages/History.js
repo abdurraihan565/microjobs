@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 
 function History() {
   // const id = location.state.id;
-  const [userinfo, setuserinfo] = useState([]);
+  //const [userinfo, setuserinfo] = useState([]);
   const [provedata, setprovedata] = useState([]);
   console.log(provedata);
 
@@ -27,14 +27,14 @@ function History() {
 
   //console.log(userMatch[0]);
 
-  useEffect(() => {
+  /* useEffect(() => {
     const fetchData = async () => {
       const result = await axios.get('/userinfo');
       setuserinfo(result.data);
     };
 
     fetchData();
-  }, []);
+  }, []);*/
   // fetch data form provedata
 
   useEffect(() => {
@@ -130,31 +130,6 @@ function History() {
         </div>
       </div>
     </div>
-    /* <div>
-      {userinfo.map((obj) => {
-        if (obj.id == sessionStorage.getItem('id')) {
-          const {
-            id,
-            status,
-            withdraw,
-            payments,
-            details,
-            title,
-            youtube,
-            facebook,
-            twitter,
-            instagram,
-          } = obj;
-          console.log(title);
-
-          return (
-            <div key={obj.id}>
-              
-            </div>
-          );
-        }
-      })}
-    </div>*/
   );
 }
 

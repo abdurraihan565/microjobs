@@ -1,25 +1,24 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
-import axios from 'axios';
 
 //import data from '../data';
 
 function Home() {
-  const [products, setProducts] = useState([]);
+  //const [products, setProducts] = useState([]);
   //const [value, setvalue] = useState('');
   const name = sessionStorage.getItem('name');
 
   //console.log(products);
-  useEffect(() => {
+  /* useEffect(() => {
     const fetchData = async () => {
       const result = await axios.get('/api/products');
       setProducts(result.data);
     };
     fetchData();
-  }, []);
+  }, []);*/
 
   // searchProducts start
-  const [searchText, setSearchText] = useState('');
+  /* const [searchText, setSearchText] = useState('');
 
   const handleChange = (e) => {
     setSearchText(e.target.value);
@@ -30,7 +29,7 @@ function Home() {
     });
     setProducts(newProducts);
   };
-  useEffect(() => {}, [searchText]);
+  useEffect(() => {}, [searchText]);*/
   // searchProducts ends
   const contact_btn = () => {
     setInterval(() => {
