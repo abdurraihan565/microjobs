@@ -1,36 +1,15 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-
-//import data from '../data';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 function Home() {
-  //const [products, setProducts] = useState([]);
-  //const [value, setvalue] = useState('');
   const name = sessionStorage.getItem('name');
 
-  //console.log(products);
-  /* useEffect(() => {
-    const fetchData = async () => {
-      const result = await axios.get('/api/products');
-      setProducts(result.data);
-    };
-    fetchData();
-  }, []);*/
+  useEffect(() => {
+    AOS.init({ duration: 2000 });
+  }, []);
 
-  // searchProducts start
-  /* const [searchText, setSearchText] = useState('');
-
-  const handleChange = (e) => {
-    setSearchText(e.target.value);
-    let value = searchText.toLowerCase();
-    const newProducts = products.filter((product) => {
-      const productsName = product.name.toLowerCase();
-      return productsName.startsWith(value);
-    });
-    setProducts(newProducts);
-  };
-  useEffect(() => {}, [searchText]);*/
-  // searchProducts ends
   const contact_btn = () => {
     setInterval(() => {
       const contact_msg = document.querySelector('.contact_msg');
@@ -47,18 +26,31 @@ function Home() {
   };
   return (
     <div>
-      <div className="refreash_msg">
-        <span onClick={refreash_msg}>x</span>
-        <p>Dear {name} please Refreash the page </p>
-      </div>
+      {sessionStorage.getItem('userData') ? (
+        <div className="refreash_msg">
+          <span onClick={refreash_msg}>x</span>
+          <p>Dear {name} please Refreash the page </p>
+        </div>
+      ) : (
+        ''
+      )}
+
       <section>
         <div className="hero_containner">
           <div className="hero_des">
-            <h1>Best Microjob & Freelance Site To Make Money Online</h1>
+            <h1 data-aos="fade-right">
+              Best Microjob & Freelance Site To Make Money Online
+            </h1>
             <h6>small Gigs Big Results !</h6>
-            <Link to="login">
-              <button>Earn Money</button>
-            </Link>
+            {sessionStorage.getItem('userData') ? (
+              <Link to="dashboard">
+                <button>Earn Money</button>
+              </Link>
+            ) : (
+              <Link to="login">
+                <button>Login Now</button>
+              </Link>
+            )}
           </div>
           <div className="hero_img">
             <img src="/images/cover4.png" alt="" />
@@ -67,7 +59,7 @@ function Home() {
         <section className="card_containner">
           <h1>How Its Works</h1>
           <div className="card">
-            <div className="card_items">
+            <div className="card_items" data-aos="flip-right">
               <div className="card_icon">
                 <i class="fa-solid fa-user-plus"></i>
               </div>
@@ -77,7 +69,7 @@ function Home() {
                 required tasks Send required proofs
               </p>
             </div>
-            <div className="card_items">
+            <div className="card_items" data-aos="flip-right">
               <div className="card_icon">
                 <i class="fa-solid fa-earth-americas"></i>
               </div>
@@ -87,7 +79,7 @@ function Home() {
                 required tasks Send required proofs
               </p>
             </div>
-            <div className="card_items">
+            <div className="card_items" data-aos="flip-right">
               <div className="card_icon">
                 <i class="fa-solid fa-money-bill-transfer"></i>
               </div>
@@ -108,7 +100,7 @@ function Home() {
                 get more money !
               </p>
             </div>
-            <div className="news_img">
+            <div className="news_img" data-aos="flip-right">
               <img src="/images/cover3.png" alt="" />
             </div>
           </div>
@@ -116,9 +108,11 @@ function Home() {
         <section>
           <div className="contacts">
             <div className="contact_pera">
-              <p>contact us</p>
-              <p>abdurraihan@gmail.com</p>
-              <p>abdurraihan@gmail.com</p>
+              <p>
+                <i class="fa-solid fa-phone"></i> contact us
+              </p>
+              <p>abdurraihan565@gmail.com</p>
+              <p>abdurraihan901@gmail.com</p>
             </div>
             <div>
               <div className="contact_input">

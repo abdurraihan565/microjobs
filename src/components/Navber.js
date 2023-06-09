@@ -8,7 +8,6 @@ function Navber() {
   const [message, setmessage] = useState([]);
   console.log(message);
   const [DepositBalance, setDepositBalance] = useState([]);
-  //console.log(DepositBalance);
 
   const id = sessionStorage.getItem('id');
   const name = sessionStorage.getItem('name');
@@ -139,10 +138,6 @@ function Navber() {
           </Link>
           <Link to="dashboard/deposit">
             <button>Deposit Now</button>
-          </Link>
-
-          <Link to="">
-            <button>Create Advertisement</button>
           </Link>
           <Link to="dashboard/createpost">
             <button>Post a Work</button>

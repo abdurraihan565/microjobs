@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 
 function Dashboard() {
   const [products, setProducts] = useState([]);
+
   // const [value, setvalue] = useState('');
 
   useEffect(() => {
@@ -49,12 +50,7 @@ function Dashboard() {
             <Link to="createpost/posthistory">
               <button>My Post History</button>
             </Link>
-            <Link>
-              <button>Create a new Advertisment</button>
-            </Link>
-            <Link>
-              <button>My Advertisement History</button>
-            </Link>
+
             <Link to="/">
               <button>Contact Us</button>
             </Link>
@@ -91,6 +87,8 @@ function Dashboard() {
                   country,
                   countInStock,
                   countOutStock,
+                  desone,
+                  destwo,
                 } = product;
                 return (
                   <>
@@ -109,6 +107,8 @@ function Dashboard() {
                             country,
                             countInStock,
                             countOutStock,
+                            desone,
+                            destwo,
                           }}
                         >
                           <button className="btn">click Here</button>
